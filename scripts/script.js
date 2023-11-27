@@ -1,6 +1,8 @@
 // get reference to container for appending
 const container = document.querySelector('.grid-container');
 
+
+// function that populates the container with squares, default layout is 16x16 so 256 squares
 function createGrid(squares = 256) {
     let containerWidth = container.clientWidth;
     let containerHeight = container.clientHeight;
@@ -23,3 +25,12 @@ function createGrid(squares = 256) {
 }
 
 window.addEventListener('load', createGrid());
+
+
+// the 'drawing' functionality
+const pads = document.querySelectorAll('.grid-square');
+for (const pad of pads) {
+    pad.addEventListener('mouseover', (e) => {
+        e.target.style.backgroundColor = 'black';
+    });
+};
