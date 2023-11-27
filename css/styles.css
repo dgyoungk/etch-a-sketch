@@ -14,6 +14,11 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    gap: 16px;
+}
+
+.btn-container {
+    margin: auto;
 }
 
 .grid-container {
